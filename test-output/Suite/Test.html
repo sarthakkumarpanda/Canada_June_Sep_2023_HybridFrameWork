@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>18/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 14 22:48:20 EDT 2023</td>
+<td>Started on:</td><td>Sun Sep 17 20:26:49 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>152 seconds (152611 ms)</td>
+<tr><td>Total time:</td><td>33 seconds (33006 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,58 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithInvalidProduct()'><b>verifySearchWithInvalidProduct</b><br>Test class: com.qa.tutorialsninja.TestCases.SearchProductTest</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithInvalidProduct(SearchProductTest.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1792109661", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1792109661'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithInvalidProduct(SearchProductTest.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.tutorialsninja.TestCases.SearchProductTest@27406a17</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,95 +128,59 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithValidCredentials()'><b>verifyLoginWithValidCredentials</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest<br>Parameters: seleniumpanda1@gmail.com, Selenium@123</td>
-<td></td>
-<td>1</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithInvalidCredentials()'><b>verifyLoginWithInvalidCredentials</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest</td>
+<td title='com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithValidProduct()'><b>verifySearchWithValidProduct</b><br>Test class: com.qa.tutorialsninja.TestCases.SearchProductTest</td>
 <td></td>
 <td>0</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithInvalidProduct()'><b>verifySearchWithInvalidProduct</b><br>Test class: com.qa.tutorialsninja.TestCases.SearchProductTest</td>
-<td></td>
-<td>1</td>
-<td>com.qa.tutorialsninja.TestCases.SearchProductTest@5f049ea1</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithValidCredentials()'><b>verifyLoginWithValidCredentials</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest<br>Parameters: seleniumpanda5@gmail.com, Selenium@123</td>
-<td></td>
-<td>1</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithValidCredentials()'><b>verifyLoginWithValidCredentials</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest<br>Parameters: seleniumpanda3@gmail.com, Selenium@123</td>
-<td></td>
-<td>1</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
+<td>com.qa.tutorialsninja.TestCases.SearchProductTest@27406a17</td></tr>
 <tr>
 <td title='com.qa.tutorialsninja.TestCases.RegisterTest.verifyRegisterWithMandatoryDetails()'><b>verifyRegisterWithMandatoryDetails</b><br>Test class: com.qa.tutorialsninja.TestCases.RegisterTest</td>
 <td></td>
 <td>1</td>
-<td>com.qa.tutorialsninja.TestCases.RegisterTest@3f191845</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithNoProduct()'><b>verifySearchWithNoProduct</b><br>Test class: com.qa.tutorialsninja.TestCases.SearchProductTest</td>
-<td></td>
-<td>0</td>
-<td>com.qa.tutorialsninja.TestCases.SearchProductTest@5f049ea1</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.RegisterTest.verifyRegisterWithAllDetails()'><b>verifyRegisterWithAllDetails</b><br>Test class: com.qa.tutorialsninja.TestCases.RegisterTest</td>
-<td></td>
-<td>1</td>
-<td>com.qa.tutorialsninja.TestCases.RegisterTest@3f191845</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithInvalidEmailValidPassword()'><b>verifyLoginWithInvalidEmailValidPassword</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
+<td>com.qa.tutorialsninja.TestCases.RegisterTest@cc43f62</td></tr>
 <tr>
 <td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithNoCredentials()'><b>verifyLoginWithNoCredentials</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
+<td>com.qa.tutorialsninja.TestCases.LoginTest@2cb4893b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='com.qa.tutorialsninja.TestCases.RegisterTest.verifyRegisterWithNoDetails()'><b>verifyRegisterWithNoDetails</b><br>Test class: com.qa.tutorialsninja.TestCases.RegisterTest</td>
-<td></td>
+<td title='com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithNoProduct()'><b>verifySearchWithNoProduct</b><br>Test class: com.qa.tutorialsninja.TestCases.SearchProductTest</td>
+<td><div><pre>java.lang.Throwable: Method com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithNoProduct() on instance com.qa.tutorialsninja.TestCases.SearchProductTest@27406a17 depends on not successfully finished methods 
+[com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithInvalidProduct() on instance com.qa.tutorialsninja.TestCases.SearchProductTest@27406a17]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1093223281", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1093223281'><pre>java.lang.Throwable: Method com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithNoProduct() on instance com.qa.tutorialsninja.TestCases.SearchProductTest@27406a17 depends on not successfully finished methods 
+[com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithInvalidProduct() on instance com.qa.tutorialsninja.TestCases.SearchProductTest@27406a17]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
 <td>0</td>
-<td>com.qa.tutorialsninja.TestCases.RegisterTest@3f191845</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.RegisterTest.verifyRegisterWithExistingEmail()'><b>verifyRegisterWithExistingEmail</b><br>Test class: com.qa.tutorialsninja.TestCases.RegisterTest</td>
-<td></td>
-<td>1</td>
-<td>com.qa.tutorialsninja.TestCases.RegisterTest@3f191845</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithValidCredentials()'><b>verifyLoginWithValidCredentials</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest<br>Parameters: seleniumpanda6@gmail.com, Selenium@123</td>
-<td></td>
-<td>1</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithValidCredentials()'><b>verifyLoginWithValidCredentials</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest<br>Parameters: seleniumpanda@gmail.com, Selenium@123</td>
-<td></td>
-<td>1</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithValidEmailInvalidPassword()'><b>verifyLoginWithValidEmailInvalidPassword</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithValidCredentials()'><b>verifyLoginWithValidCredentials</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest<br>Parameters: seleniumpanda2@gmail.com, Selenium@123</td>
-<td></td>
-<td>1</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.SearchProductTest.verifySearchWithValidProduct()'><b>verifySearchWithValidProduct</b><br>Test class: com.qa.tutorialsninja.TestCases.SearchProductTest</td>
-<td></td>
-<td>0</td>
-<td>com.qa.tutorialsninja.TestCases.SearchProductTest@5f049ea1</td></tr>
-<tr>
-<td title='com.qa.tutorialsninja.TestCases.LoginTest.verifyLoginWithValidCredentials()'><b>verifyLoginWithValidCredentials</b><br>Test class: com.qa.tutorialsninja.TestCases.LoginTest<br>Parameters: seleniumpanda4@gmail.com, Selenium@123</td>
-<td></td>
-<td>1</td>
-<td>com.qa.tutorialsninja.TestCases.LoginTest@15bb5034</td></tr>
+<td>com.qa.tutorialsninja.TestCases.SearchProductTest@27406a17</td></tr>
 </table><p>
 </body>
 </html>

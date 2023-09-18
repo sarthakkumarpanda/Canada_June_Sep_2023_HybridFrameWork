@@ -38,20 +38,43 @@ public class LandingPage {
 		MyAccountDropDown.click();
 	}
 	
-	public void selectLoginOption() {
+	public LoginPage selectLoginOption() {
 		LoginOption.click();
+		return new LoginPage(driver);
 	}
 	
-	public void selectRegisterOption() {
-		RegisterOption.click();
+	public LoginPage navigateToLoginPage() {
+		MyAccountDropDown.click();
+		LoginOption.click();
+		return new LoginPage(driver);
 	}
+	
+	public RegisterPage selectRegisterOption() {
+		RegisterOption.click();
+		return new RegisterPage(driver);
+	}
+	
+	public RegisterPage navigateToRegisterPage() {
+		MyAccountDropDown.click();
+		RegisterOption.click();
+		return new RegisterPage(driver);
+	}
+	
+
 	
 	public void enterProductNameInSearchBox(String validProductText) {
 		searchBox.sendKeys(validProductText);
 	}
 	
-	public void clickOnSearchButton() {
+	public SearchPage clickOnSearchButton() {
 		searchButton.click();
+		return new SearchPage(driver);
+	}
+	
+	public SearchPage navigateToSearchPage(String validProductText) {
+		searchBox.sendKeys(validProductText);
+		searchButton.click();
+		return new SearchPage(driver);
 	}
 
 }

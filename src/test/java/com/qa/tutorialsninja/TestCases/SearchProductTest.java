@@ -28,35 +28,25 @@ public class SearchProductTest extends TestBase{
 	@Test(priority=1)
 	public void verifySearchWithValidProduct() {
 		landingpage = new LandingPage(driver);
-		landingpage.enterProductNameInSearchBox(dataprop.getProperty("validProduct"));
-		//driver.findElement(By.xpath("//input[@name = 'search']")).sendKeys(dataprop.getProperty("validProduct"));
-		landingpage.clickOnSearchButton();
-		//driver.findElement(By.cssSelector("button.btn.btn-default.btn-lg")).click();
-		searchpage = new SearchPage(driver);
+		searchpage = landingpage.navigateToSearchPage(dataprop.getProperty("validProduct"));
 		Assert.assertTrue(searchpage.displayStatusValidProduct());
-		//Assert.assertTrue(driver.findElement(By.linkText("HP LP3065")).isDisplayed());
+		
 	}
 	
 	@Test(priority=2)
 	public void verifySearchWithInvalidProduct() {
 		landingpage = new LandingPage(driver);
-		landingpage.enterProductNameInSearchBox(dataprop.getProperty("invalidProduct"));
-		//driver.findElement(By.xpath("//input[@name = 'search']")).sendKeys(dataprop.getProperty("invalidProduct"));
-		landingpage.clickOnSearchButton();
-		//driver.findElement(By.cssSelector("button.btn.btn-default.btn-lg")).click();
-		searchpage = new SearchPage(driver);
-		Assert.assertTrue(searchpage.displayStatusInvalidOrNoProduct());
-		//Assert.assertTrue(driver.findElement(By.xpath("//p[text() = 'There is no product that matches the search criteria.']")).isDisplayed());
+		searchpage = landingpage.navigateToSearchPage(dataprop.getProperty("invalidProduct"));
+		//Assert.assertTrue(searchpage.displayStatusInvalidOrNoProduct());
+		Assert.assertFalse(searchpage.displayStatusInvalidOrNoProduct());
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3, dependsOnMethods = "verifySearchWithInvalidProduct")
 	public void verifySearchWithNoProduct() {
 		landingpage = new LandingPage(driver);
-		landingpage.clickOnSearchButton();
-		//driver.findElement(By.cssSelector("button.btn.btn-default.btn-lg")).click();
-		searchpage = new SearchPage(driver);
-		Assert.assertTrue(searchpage.displayStatusInvalidOrNoProduct());
-		//Assert.assertTrue(driver.findElement(By.xpath("//p[text() = 'There is no product that matches the search criteria.']")).isDisplayed());
+		searchpage = landingpage.clickOnSearchButton();
+	    Assert.assertTrue(searchpage.displayStatusInvalidOrNoProduct());
+		
 	}
 	
 	@AfterMethod

@@ -20,6 +20,23 @@
 	</properties>
 
 	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.28</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.0</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -35,7 +52,7 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.12.1</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -73,7 +90,7 @@
 			<version>2.12.0</version>
 		</dependency>
 
-		
+
 	</dependencies>
 
 
@@ -97,10 +114,21 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.0</version>
 				</plugin>
+				
+				
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.22.1</version>
+					<version>3.1.2</version>
+					<configuration>
+						<suiteXmlFiles>
+							 <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+				        <!-- <suiteXmlFile>target\surefire-reports\testng-failed.xml</suiteXmlFile> -->
+						</suiteXmlFiles>
+					</configuration>
 				</plugin>
+				
+				
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>3.0.2</version>
